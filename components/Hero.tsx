@@ -1,22 +1,22 @@
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
+import Image from 'next/image';
 
-type Props = {}
+type Props = {};
 
-export default function Hero({}: Props) {
+function Hero({}: Props) {
     const [text, count] = useTypewriter({
         words: [
+            '<GalWhoLovesToCode />',
             'Hi, my name is Kelsey Moussa',
-            'Girl-who-loves-Coffee.tsx', 
-            '<ButLovesToCodeMore />'
         ],
         loop: true,
-        delaySpeed: 2000
+        delaySpeed: 2000,
     });
 
     return (
-        <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+        <div className=''>
             <BackgroundCircles />
             <h1>
                 <span>{text}</span>
@@ -25,3 +25,5 @@ export default function Hero({}: Props) {
         </div>
     );
 }
+
+export default Hero;
